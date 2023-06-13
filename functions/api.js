@@ -1,9 +1,22 @@
 const express = require("express");
 const serverless = require("serverless-http");
+const cors = require("cors");
+
 const app = express();
 const router = express.Router();
 
-let records = [];
+var whitelist = ["*", "https://dacntt2-n092-fe.netlify.app"];
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 
 //Get all students
 router.get("/", (req, res) => {
