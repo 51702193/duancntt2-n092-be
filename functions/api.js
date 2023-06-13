@@ -73,8 +73,8 @@ router.get("/demo", (req, res) => {
   ]);
 });
 
-// app.use("/api", router);
-app.use("/.netlify/functions/api/", router);
+app.use("/api", router);
+// app.use("/.netlify/functions/api/", router);
 
 if (process.env.MODE === "LOCAL") {
   app.listen(5000, () => {
@@ -82,5 +82,5 @@ if (process.env.MODE === "LOCAL") {
   });
 }
 
-export default serverless(app);
+exports.handler = serverless(app);
 // module.exports.handler = serverless(app);
