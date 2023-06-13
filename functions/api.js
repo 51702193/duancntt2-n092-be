@@ -74,7 +74,7 @@ router.get("/demo", (req, res) => {
 });
 
 // app.use("/api", router);
-app.use("/api", router);
+app.use("/.netlify/functions/api", router);
 
 if (process.env.MODE === "LOCAL") {
   app.listen(5000, () => {
