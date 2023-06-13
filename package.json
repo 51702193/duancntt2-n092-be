@@ -2,14 +2,17 @@
   "name": "dacntt2-n092-be",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "start": "node ./bin/www",
+    "test": "node ./bin/www",
+    "start": "node ./functions/api.js",
     "build": "netlify deploy --prod"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "dotenv": "^16.1.4",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",

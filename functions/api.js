@@ -1,13 +1,25 @@
-const express = require("express");
-const serverless = require("serverless-http");
-const cors = require("cors");
+import express from "express";
+import serverless from "serverless-http";
+import cors from "cors";
+import "dotenv/config";
+// const express = require("express");
+// const serverless = require("serverless-http");
+// const cors = require("cors");
+
+// console.log(process.env);
 
 const app = express();
 const router = express.Router();
 
-var whitelist = ["*", "https://dacntt2-n092-fe.netlify.app"];
+console.log(process.env.MODE);
+
+var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
 var corsOptions = {
   origin: function (origin, callback) {
+    if (process.env.MODE === "LOCAL") {
+      callback(null, true);
+      return;
+    }
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -59,5 +71,13 @@ router.get("/demo", (req, res) => {
   ]);
 });
 
-app.use("/.netlify/functions/api", router);
-module.exports.handler = serverless(app);
+app.use("/api", router);
+
+if (process.env.MODE === "LOCAL") {
+  app.listen(5000, () => {
+    console.log(`Example app listening on port ${5000}`);
+  });
+}
+
+export default serverless(app);
+// module.exports.handler = serverless(app);
