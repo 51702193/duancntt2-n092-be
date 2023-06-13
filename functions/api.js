@@ -16,6 +16,8 @@ console.log(process.env.MODE);
 var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
 var corsOptions = {
   origin: function (origin, callback) {
+    callback(null, true);
+    return;
     if (process.env.MODE === "LOCAL") {
       callback(null, true);
       return;
