@@ -2,10 +2,9 @@
   "name": "dacntt2-n092-be",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "test": "node ./bin/www",
-    "start": "node ./functions/api.js",
+    "start": "node ./functions/api",
     "build": "netlify deploy --prod --dir=."
   },
   "dependencies": {

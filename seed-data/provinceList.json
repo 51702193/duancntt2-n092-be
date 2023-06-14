@@ -1,317 +1,317 @@
 [
   {
-    "proviceId": "01",
-    "provice": "Thành phố Hà Nội",
-    "proviceType": "Thành phố Trung ương"
+    "provinceId": "01",
+    "province": "Thành phố Hà Nội",
+    "provinceType": "Thành phố Trung ương"
   },
   {
-    "proviceId": "02",
-    "provice": "Tỉnh Hà Giang",
-    "proviceType": "Tỉnh"
+    "provinceId": "02",
+    "province": "Tỉnh Hà Giang",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "04",
-    "provice": "Tỉnh Cao Bằng",
-    "proviceType": "Tỉnh"
+    "provinceId": "04",
+    "province": "Tỉnh Cao Bằng",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "06",
-    "provice": "Tỉnh Bắc Kạn",
-    "proviceType": "Tỉnh"
+    "provinceId": "06",
+    "province": "Tỉnh Bắc Kạn",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "08",
-    "provice": "Tỉnh Tuyên Quang",
-    "proviceType": "Tỉnh"
+    "provinceId": "08",
+    "province": "Tỉnh Tuyên Quang",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "10",
-    "provice": "Tỉnh Lào Cai",
-    "proviceType": "Tỉnh"
+    "provinceId": "10",
+    "province": "Tỉnh Lào Cai",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "11",
-    "provice": "Tỉnh Điện Biên",
-    "proviceType": "Tỉnh"
+    "provinceId": "11",
+    "province": "Tỉnh Điện Biên",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "12",
-    "provice": "Tỉnh Lai Châu",
-    "proviceType": "Tỉnh"
+    "provinceId": "12",
+    "province": "Tỉnh Lai Châu",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "14",
-    "provice": "Tỉnh Sơn La",
-    "proviceType": "Tỉnh"
+    "provinceId": "14",
+    "province": "Tỉnh Sơn La",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "15",
-    "provice": "Tỉnh Yên Bái",
-    "proviceType": "Tỉnh"
+    "provinceId": "15",
+    "province": "Tỉnh Yên Bái",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "17",
-    "provice": "Tỉnh Hoà Bình",
-    "proviceType": "Tỉnh"
+    "provinceId": "17",
+    "province": "Tỉnh Hoà Bình",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "19",
-    "provice": "Tỉnh Thái Nguyên",
-    "proviceType": "Tỉnh"
+    "provinceId": "19",
+    "province": "Tỉnh Thái Nguyên",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "20",
-    "provice": "Tỉnh Lạng Sơn",
-    "proviceType": "Tỉnh"
+    "provinceId": "20",
+    "province": "Tỉnh Lạng Sơn",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "22",
-    "provice": "Tỉnh Quảng Ninh",
-    "proviceType": "Tỉnh"
+    "provinceId": "22",
+    "province": "Tỉnh Quảng Ninh",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "24",
-    "provice": "Tỉnh Bắc Giang",
-    "proviceType": "Tỉnh"
+    "provinceId": "24",
+    "province": "Tỉnh Bắc Giang",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "25",
-    "provice": "Tỉnh Phú Thọ",
-    "proviceType": "Tỉnh"
+    "provinceId": "25",
+    "province": "Tỉnh Phú Thọ",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "26",
-    "provice": "Tỉnh Vĩnh Phúc",
-    "proviceType": "Tỉnh"
+    "provinceId": "26",
+    "province": "Tỉnh Vĩnh Phúc",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "27",
-    "provice": "Tỉnh Bắc Ninh",
-    "proviceType": "Tỉnh"
+    "provinceId": "27",
+    "province": "Tỉnh Bắc Ninh",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "30",
-    "provice": "Tỉnh Hải Dương",
-    "proviceType": "Tỉnh"
+    "provinceId": "30",
+    "province": "Tỉnh Hải Dương",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "31",
-    "provice": "Thành phố Hải Phòng",
-    "proviceType": "Thành phố Trung ương"
+    "provinceId": "31",
+    "province": "Thành phố Hải Phòng",
+    "provinceType": "Thành phố Trung ương"
   },
   {
-    "proviceId": "33",
-    "provice": "Tỉnh Hưng Yên",
-    "proviceType": "Tỉnh"
+    "provinceId": "33",
+    "province": "Tỉnh Hưng Yên",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "34",
-    "provice": "Tỉnh Thái Bình",
-    "proviceType": "Tỉnh"
+    "provinceId": "34",
+    "province": "Tỉnh Thái Bình",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "35",
-    "provice": "Tỉnh Hà Nam",
-    "proviceType": "Tỉnh"
+    "provinceId": "35",
+    "province": "Tỉnh Hà Nam",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "36",
-    "provice": "Tỉnh Nam Định",
-    "proviceType": "Tỉnh"
+    "provinceId": "36",
+    "province": "Tỉnh Nam Định",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "37",
-    "provice": "Tỉnh Ninh Bình",
-    "proviceType": "Tỉnh"
+    "provinceId": "37",
+    "province": "Tỉnh Ninh Bình",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "38",
-    "provice": "Tỉnh Thanh Hóa",
-    "proviceType": "Tỉnh"
+    "provinceId": "38",
+    "province": "Tỉnh Thanh Hóa",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "40",
-    "provice": "Tỉnh Nghệ An",
-    "proviceType": "Tỉnh"
+    "provinceId": "40",
+    "province": "Tỉnh Nghệ An",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "42",
-    "provice": "Tỉnh Hà Tĩnh",
-    "proviceType": "Tỉnh"
+    "provinceId": "42",
+    "province": "Tỉnh Hà Tĩnh",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "44",
-    "provice": "Tỉnh Quảng Bình",
-    "proviceType": "Tỉnh"
+    "provinceId": "44",
+    "province": "Tỉnh Quảng Bình",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "45",
-    "provice": "Tỉnh Quảng Trị",
-    "proviceType": "Tỉnh"
+    "provinceId": "45",
+    "province": "Tỉnh Quảng Trị",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "46",
-    "provice": "Tỉnh Thừa Thiên Huế",
-    "proviceType": "Tỉnh"
+    "provinceId": "46",
+    "province": "Tỉnh Thừa Thiên Huế",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "48",
-    "provice": "Thành phố Đà Nẵng",
-    "proviceType": "Thành phố Trung ương"
+    "provinceId": "48",
+    "province": "Thành phố Đà Nẵng",
+    "provinceType": "Thành phố Trung ương"
   },
   {
-    "proviceId": "49",
-    "provice": "Tỉnh Quảng Nam",
-    "proviceType": "Tỉnh"
+    "provinceId": "49",
+    "province": "Tỉnh Quảng Nam",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "51",
-    "provice": "Tỉnh Quảng Ngãi",
-    "proviceType": "Tỉnh"
+    "provinceId": "51",
+    "province": "Tỉnh Quảng Ngãi",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "52",
-    "provice": "Tỉnh Bình Định",
-    "proviceType": "Tỉnh"
+    "provinceId": "52",
+    "province": "Tỉnh Bình Định",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "54",
-    "provice": "Tỉnh Phú Yên",
-    "proviceType": "Tỉnh"
+    "provinceId": "54",
+    "province": "Tỉnh Phú Yên",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "56",
-    "provice": "Tỉnh Khánh Hòa",
-    "proviceType": "Tỉnh"
+    "provinceId": "56",
+    "province": "Tỉnh Khánh Hòa",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "58",
-    "provice": "Tỉnh Ninh Thuận",
-    "proviceType": "Tỉnh"
+    "provinceId": "58",
+    "province": "Tỉnh Ninh Thuận",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "60",
-    "provice": "Tỉnh Bình Thuận",
-    "proviceType": "Tỉnh"
+    "provinceId": "60",
+    "province": "Tỉnh Bình Thuận",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "62",
-    "provice": "Tỉnh Kon Tum",
-    "proviceType": "Tỉnh"
+    "provinceId": "62",
+    "province": "Tỉnh Kon Tum",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "64",
-    "provice": "Tỉnh Gia Lai",
-    "proviceType": "Tỉnh"
+    "provinceId": "64",
+    "province": "Tỉnh Gia Lai",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "66",
-    "provice": "Tỉnh Đắk Lắk",
-    "proviceType": "Tỉnh"
+    "provinceId": "66",
+    "province": "Tỉnh Đắk Lắk",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "67",
-    "provice": "Tỉnh Đắk Nông",
-    "proviceType": "Tỉnh"
+    "provinceId": "67",
+    "province": "Tỉnh Đắk Nông",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "68",
-    "provice": "Tỉnh Lâm Đồng",
-    "proviceType": "Tỉnh"
+    "provinceId": "68",
+    "province": "Tỉnh Lâm Đồng",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "70",
-    "provice": "Tỉnh Bình Phước",
-    "proviceType": "Tỉnh"
+    "provinceId": "70",
+    "province": "Tỉnh Bình Phước",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "72",
-    "provice": "Tỉnh Tây Ninh",
-    "proviceType": "Tỉnh"
+    "provinceId": "72",
+    "province": "Tỉnh Tây Ninh",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "74",
-    "provice": "Tỉnh Bình Dương",
-    "proviceType": "Tỉnh"
+    "provinceId": "74",
+    "province": "Tỉnh Bình Dương",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "75",
-    "provice": "Tỉnh Đồng Nai",
-    "proviceType": "Tỉnh"
+    "provinceId": "75",
+    "province": "Tỉnh Đồng Nai",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "77",
-    "provice": "Tỉnh Bà Rịa - Vũng Tàu",
-    "proviceType": "Tỉnh"
+    "provinceId": "77",
+    "province": "Tỉnh Bà Rịa - Vũng Tàu",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "79",
-    "provice": "Thành phố Hồ Chí Minh",
-    "proviceType": "Thành phố Trung ương"
+    "provinceId": "79",
+    "province": "Thành phố Hồ Chí Minh",
+    "provinceType": "Thành phố Trung ương"
   },
   {
-    "proviceId": "80",
-    "provice": "Tỉnh Long An",
-    "proviceType": "Tỉnh"
+    "provinceId": "80",
+    "province": "Tỉnh Long An",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "82",
-    "provice": "Tỉnh Tiền Giang",
-    "proviceType": "Tỉnh"
+    "provinceId": "82",
+    "province": "Tỉnh Tiền Giang",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "83",
-    "provice": "Tỉnh Bến Tre",
-    "proviceType": "Tỉnh"
+    "provinceId": "83",
+    "province": "Tỉnh Bến Tre",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "84",
-    "provice": "Tỉnh Trà Vinh",
-    "proviceType": "Tỉnh"
+    "provinceId": "84",
+    "province": "Tỉnh Trà Vinh",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "86",
-    "provice": "Tỉnh Vĩnh Long",
-    "proviceType": "Tỉnh"
+    "provinceId": "86",
+    "province": "Tỉnh Vĩnh Long",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "87",
-    "provice": "Tỉnh Đồng Tháp",
-    "proviceType": "Tỉnh"
+    "provinceId": "87",
+    "province": "Tỉnh Đồng Tháp",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "89",
-    "provice": "Tỉnh An Giang",
-    "proviceType": "Tỉnh"
+    "provinceId": "89",
+    "province": "Tỉnh An Giang",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "91",
-    "provice": "Tỉnh Kiên Giang",
-    "proviceType": "Tỉnh"
+    "provinceId": "91",
+    "province": "Tỉnh Kiên Giang",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "92",
-    "provice": "Thành phố Cần Thơ",
-    "proviceType": "Thành phố Trung ương"
+    "provinceId": "92",
+    "province": "Thành phố Cần Thơ",
+    "provinceType": "Thành phố Trung ương"
   },
   {
-    "proviceId": "93",
-    "provice": "Tỉnh Hậu Giang",
-    "proviceType": "Tỉnh"
+    "provinceId": "93",
+    "province": "Tỉnh Hậu Giang",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "94",
-    "provice": "Tỉnh Sóc Trăng",
-    "proviceType": "Tỉnh"
+    "provinceId": "94",
+    "province": "Tỉnh Sóc Trăng",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "95",
-    "provice": "Tỉnh Bạc Liêu",
-    "proviceType": "Tỉnh"
+    "provinceId": "95",
+    "province": "Tỉnh Bạc Liêu",
+    "provinceType": "Tỉnh"
   },
   {
-    "proviceId": "96",
-    "provice": "Tỉnh Cà Mau",
-    "proviceType": "Tỉnh"
+    "provinceId": "96",
+    "province": "Tỉnh Cà Mau",
+    "provinceType": "Tỉnh"
   }
 ]

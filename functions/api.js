@@ -1,12 +1,11 @@
-import express from "express";
-import serverless from "serverless-http";
-import cors from "cors";
-import "dotenv/config";
-// const express = require("express");
-// const serverless = require("serverless-http");
-// const cors = require("cors");
+const express = require("express");
+const serverless = require("serverless-http");
+const cors = require("cors");
 
-// console.log(process.env);
+require("dotenv/config");
+
+const districtList = require("../seed-data/districtList.json");
+const provinceList = require("../seed-data/provinceList.json");
 
 const app = express();
 const router = express.Router();
@@ -16,9 +15,11 @@ console.log(process.env.MODE);
 var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
 var corsOptions = {
   origin: function (origin, callback) {
+    console.log("run2");
     callback(null, true);
-    return;
-    if (process.env.MODE === "LOCAL") {
+
+    if (process.env.MODE === "LOCAL" || process.env.MODE === "DEV") {
+      console.log("run");
       callback(null, true);
       return;
     }
@@ -37,9 +38,11 @@ router.get("/", (req, res) => {
   res.send("App is running..");
 });
 
-//Create new record
-router.post("/add", (req, res) => {
-  res.send("New record added.");
+router.get("/districts", (req, res) => {
+  res.send(districtList);
+});
+router.get("/provinces", (req, res) => {
+  res.send(provinceList);
 });
 
 //delete existing record
@@ -52,27 +55,6 @@ router.put("/", (req, res) => {
   res.send("Updating existing record");
 });
 
-//showing demo records
-router.get("/demo", (req, res) => {
-  res.json([
-    {
-      id: "001",
-      name: "Smith",
-      email: "smith@gmail.com",
-    },
-    {
-      id: "002",
-      name: "Sam",
-      email: "sam@gmail.com",
-    },
-    {
-      id: "003",
-      name: "lily",
-      email: "lily@gmail.com",
-    },
-  ]);
-});
-
 // app.use("/api", router);
 app.use("/.netlify/functions/api", router);
 
@@ -82,5 +64,4 @@ if (process.env.MODE === "LOCAL") {
   });
 }
 
-exports.handler = serverless(app);
-// module.exports.handler = serverless(app);
+module.exports.handler = serverless(app);
