@@ -1,0 +1,317 @@
+[
+  {
+    "proviceId": "01",
+    "provice": "Thành phố Hà Nội",
+    "proviceType": "Thành phố Trung ương"
+  },
+  {
+    "proviceId": "02",
+    "provice": "Tỉnh Hà Giang",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "04",
+    "provice": "Tỉnh Cao Bằng",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "06",
+    "provice": "Tỉnh Bắc Kạn",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "08",
+    "provice": "Tỉnh Tuyên Quang",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "10",
+    "provice": "Tỉnh Lào Cai",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "11",
+    "provice": "Tỉnh Điện Biên",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "12",
+    "provice": "Tỉnh Lai Châu",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "14",
+    "provice": "Tỉnh Sơn La",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "15",
+    "provice": "Tỉnh Yên Bái",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "17",
+    "provice": "Tỉnh Hoà Bình",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "19",
+    "provice": "Tỉnh Thái Nguyên",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "20",
+    "provice": "Tỉnh Lạng Sơn",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "22",
+    "provice": "Tỉnh Quảng Ninh",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "24",
+    "provice": "Tỉnh Bắc Giang",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "25",
+    "provice": "Tỉnh Phú Thọ",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "26",
+    "provice": "Tỉnh Vĩnh Phúc",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "27",
+    "provice": "Tỉnh Bắc Ninh",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "30",
+    "provice": "Tỉnh Hải Dương",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "31",
+    "provice": "Thành phố Hải Phòng",
+    "proviceType": "Thành phố Trung ương"
+  },
+  {
+    "proviceId": "33",
+    "provice": "Tỉnh Hưng Yên",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "34",
+    "provice": "Tỉnh Thái Bình",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "35",
+    "provice": "Tỉnh Hà Nam",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "36",
+    "provice": "Tỉnh Nam Định",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "37",
+    "provice": "Tỉnh Ninh Bình",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "38",
+    "provice": "Tỉnh Thanh Hóa",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "40",
+    "provice": "Tỉnh Nghệ An",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "42",
+    "provice": "Tỉnh Hà Tĩnh",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "44",
+    "provice": "Tỉnh Quảng Bình",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "45",
+    "provice": "Tỉnh Quảng Trị",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "46",
+    "provice": "Tỉnh Thừa Thiên Huế",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "48",
+    "provice": "Thành phố Đà Nẵng",
+    "proviceType": "Thành phố Trung ương"
+  },
+  {
+    "proviceId": "49",
+    "provice": "Tỉnh Quảng Nam",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "51",
+    "provice": "Tỉnh Quảng Ngãi",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "52",
+    "provice": "Tỉnh Bình Định",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "54",
+    "provice": "Tỉnh Phú Yên",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "56",
+    "provice": "Tỉnh Khánh Hòa",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "58",
+    "provice": "Tỉnh Ninh Thuận",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "60",
+    "provice": "Tỉnh Bình Thuận",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "62",
+    "provice": "Tỉnh Kon Tum",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "64",
+    "provice": "Tỉnh Gia Lai",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "66",
+    "provice": "Tỉnh Đắk Lắk",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "67",
+    "provice": "Tỉnh Đắk Nông",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "68",
+    "provice": "Tỉnh Lâm Đồng",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "70",
+    "provice": "Tỉnh Bình Phước",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "72",
+    "provice": "Tỉnh Tây Ninh",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "74",
+    "provice": "Tỉnh Bình Dương",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "75",
+    "provice": "Tỉnh Đồng Nai",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "77",
+    "provice": "Tỉnh Bà Rịa - Vũng Tàu",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "79",
+    "provice": "Thành phố Hồ Chí Minh",
+    "proviceType": "Thành phố Trung ương"
+  },
+  {
+    "proviceId": "80",
+    "provice": "Tỉnh Long An",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "82",
+    "provice": "Tỉnh Tiền Giang",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "83",
+    "provice": "Tỉnh Bến Tre",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "84",
+    "provice": "Tỉnh Trà Vinh",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "86",
+    "provice": "Tỉnh Vĩnh Long",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "87",
+    "provice": "Tỉnh Đồng Tháp",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "89",
+    "provice": "Tỉnh An Giang",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "91",
+    "provice": "Tỉnh Kiên Giang",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "92",
+    "provice": "Thành phố Cần Thơ",
+    "proviceType": "Thành phố Trung ương"
+  },
+  {
+    "proviceId": "93",
+    "provice": "Tỉnh Hậu Giang",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "94",
+    "provice": "Tỉnh Sóc Trăng",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "95",
+    "provice": "Tỉnh Bạc Liêu",
+    "proviceType": "Tỉnh"
+  },
+  {
+    "proviceId": "96",
+    "provice": "Tỉnh Cà Mau",
+    "proviceType": "Tỉnh"
+  }
+]
