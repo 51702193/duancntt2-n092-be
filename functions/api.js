@@ -6,6 +6,7 @@ require("dotenv/config");
 
 const districtList = require("../seed-data/districtList.json");
 const provinceList = require("../seed-data/provinceList.json");
+const wardList = require("../seed-data/wardList.json");
 
 const app = express();
 const router = express.Router();
@@ -43,6 +44,9 @@ router.get("/districts", (req, res) => {
 });
 router.get("/provinces", (req, res) => {
   res.send(provinceList);
+});
+router.get("/wards", (req, res) => {
+  res.send(wardList);
 });
 
 //delete existing record
