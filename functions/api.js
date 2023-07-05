@@ -1,5 +1,5 @@
 const express = require("express");
-const asyncHandler = require("express-async-handler");
+// const asyncHandler = require("express-async-handler");
 const serverless = require("serverless-http");
 const cors = require("cors");
 
@@ -53,7 +53,7 @@ app.use(function (req, res, next) {
 router.get("/init", async (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
 
-  const result = await mongoRun()
+  await mongoRun()
     .then((e) => res.json({ message: e }))
     .catch((e) => res.status(400).json({ message: e }));
 });
