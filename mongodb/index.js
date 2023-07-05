@@ -30,9 +30,9 @@ async function run() {
     await client.close();
   }
 }
-// run().catch(console.dir);
+run().catch(console.dir);
 
-////////////////
+// ////////////////
 
 const dbConfig = {
   database: "DACNTT2",
@@ -50,49 +50,40 @@ async function initDb() {
     const db = client.db(dbConfig.database);
 
     const collectionsExists = await db.listCollections().toArray();
-    await Promise.all(
-      collectionsExists?.map(async (collection) => {
-        await db.dropCollection(collection.name);
-      })
-    );
+    // await Promise.all(
+    //   collectionsExists?.map(async (collection) => {
+    //     await db.dropCollection(collection.name);
+    //   })
+    // );
 
-    await Promise.all(
-      dbConfig.collections?.map(async (collection) => {
-        await db.createCollection(collection.name, collection.options);
-        await db.collection(collection.name).insertMany(collection.seed || []);
-      })
-    );
+    // await Promise.all(
+    //   dbConfig.collections?.map(async (collection) => {
+    //     await db.createCollection(collection.name, collection.options);
+    //     await db.collection(collection.name).insertMany(collection.seed || []);
+    //   })
+    // );
 
-    return "successfully";
+    return collectionsExists;
   } finally {
     await client.close();
   }
 }
 
-async function initDb() {
-  // const db = await (await client.connect()).db(dbConfig.database);
+async function getProvinces() {
   try {
     await client.connect();
     const db = client.db(dbConfig.database);
-
-    const collectionsExists = await db.listCollections().toArray();
-    await Promise.all(
-      collectionsExists?.map(async (collection) => {
-        await db.dropCollection(collection.name);
-      })
-    );
-
-    await Promise.all(
-      dbConfig.collections?.map(async (collection) => {
-        await db.createCollection(collection.name, collection.options);
-        await db.collection(collection.name).insertMany(collection.seed || []);
-      })
-    );
-
-    return "successfully";
+    return await db.collection("provinces").find({}).toArray();
   } finally {
     await client.close();
   }
 }
 
-module.exports = { initDb };
+// const initDb = () =>
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("foo");
+//     }, 300);
+//   });
+
+module.exports = { initDb, getProvinces };

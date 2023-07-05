@@ -1,9 +1,9 @@
 const express = require("express");
-// const asyncHandler = require("express-async-handler");
+const asyncHandler = require("express-async-handler");
 const serverless = require("serverless-http");
 const cors = require("cors");
 
-// const { initDb: mongoRun } = require("../mongodb");
+const { initDb, getProvinces } = require("../mongodb");
 
 require("dotenv/config");
 
@@ -33,15 +33,15 @@ var corsOptions = {
   },
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
-// app.use(
-//   cors({
-//     origin: "*",
-//     credentials: true, //access-control-allow-credentials:true
-//     optionSuccessStatus: 200,
-//   })
-// );
+app.use(
+  cors({
+    origin: "*",
+    credentials: true, //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+  })
+);
 // app.use(express.json());
 
 // app.use(function (req, res, next) {
@@ -52,27 +52,33 @@ app.use(cors(corsOptions));
 //   next();
 // });
 
-// router.get("/init", async (req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "*");
-
-//   await mongoRun()
-//     .then((e) => res.json({ message: e }))
-//     .catch((e) => res.status(400).json({ message: e }));
-// });
+router.get(
+  "/init",
+  asyncHandler(async (req, res) => {
+    await initDb()
+      .then((e) => res.json({ message: e }))
+      .catch((e) => res.status(400).json({ message: e }));
+  })
+);
 
 router.get("/", (req, res) => {
   // res.setHeader("Access-Control-Allow-Origin", "*");
   // res.setHeader("Access-Control-Allow-Methods", "*");
   // res.setHeader("Access-Control-Allow-Headers", "*");
-  res.send("demo");
+  res.send("demo1");
 });
 
 router.get("/districts", (req, res) => {
   res.send(districtList);
 });
-router.get("/provinces", (req, res) => {
-  res.send(provinceList);
-});
+router.get(
+  "/provinces",
+  asyncHandler(async (req, res) => {
+    await getProvinces()
+      .then((e) => res.json(e))
+      .catch((e) => res.status(400).json({ message: e }));
+  })
+);
 router.get("/wards", (req, res) => {
   res.send(wardList);
 });
