@@ -40,6 +40,7 @@ app.use(
     optionSuccessStatus: 200,
   })
 );
+app.use(express.json());
 
 app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
