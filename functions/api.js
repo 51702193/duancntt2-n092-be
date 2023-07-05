@@ -41,7 +41,20 @@ app.use(
   })
 );
 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", true);
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+  next();
+});
+
 router.get("/init", async (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+
   const result = await mongoRun()
     .then((e) => res.json({ message: e }))
     .catch((e) => res.status(400).json({ message: e }));
