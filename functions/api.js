@@ -16,29 +16,25 @@ const router = express.Router();
 
 // console.log(process.env.MODE);
 
-// var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
-// var corsOptions = {
-//   origin: function (origin, callback) {
-//     callback(null, true);
+var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
+var corsOptions = {
+  origin: function (origin, callback) {
+    callback(null, true);
 
-//     if (process.env.MODE === "LOCAL" || process.env.MODE === "DEV") {
-//       callback(null, true);
-//       return;
-//     }
-//     if (whitelist.indexOf(origin) !== -1) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-// };
+    if (process.env.MODE === "LOCAL" || process.env.MODE === "DEV") {
+      callback(null, true);
+      return;
+    }
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
 
 app.use(
-  cors({
-    origin: "*",
-    credentials: true, //access-control-allow-credentials:true
-    optionSuccessStatus: 200,
-  })
+  cors(corsOptions)
 );
 
 app.use(function (req, res, next) {
