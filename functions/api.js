@@ -16,32 +16,38 @@ const router = express.Router();
 
 // console.log(process.env.MODE);
 
-var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
-var corsOptions = {
-  origin: function (origin, callback) {
-    callback(null, true);
+// var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
+// var corsOptions = {
+//   origin: function (origin, callback) {
+//     callback(null, true);
 
-    if (process.env.MODE === "LOCAL" || process.env.MODE === "DEV") {
-      callback(null, true);
-      return;
-    }
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
+//     if (process.env.MODE === "LOCAL" || process.env.MODE === "DEV") {
+//       callback(null, true);
+//       return;
+//     }
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+// };
 
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "*",
+    credentials: true, //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+  })
+);
 
-// app.use(function (req, res, next) {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader("Access-Control-Allow-Methods", "*");
-//   res.setHeader("Access-Control-Allow-Headers", "*");
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
 
-//   next();
-// });
+  next();
+});
 
 router.get("/init", async (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -52,6 +58,9 @@ router.get("/init", async (req, res, next) => {
 });
 
 router.get("/", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
   res.send("demo");
 });
 
