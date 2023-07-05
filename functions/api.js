@@ -3,7 +3,7 @@ const express = require("express");
 const serverless = require("serverless-http");
 const cors = require("cors");
 
-const { initDb: mongoRun } = require("../mongodb");
+// const { initDb: mongoRun } = require("../mongodb");
 
 require("dotenv/config");
 
@@ -16,52 +16,54 @@ const router = express.Router();
 
 // console.log(process.env.MODE);
 
-// var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
-// var corsOptions = {
-//   origin: function (origin, callback) {
-//     callback(null, true);
+var whitelist = ["https://dacntt2-n092-fe.netlify.app"];
+var corsOptions = {
+  origin: function (origin, callback) {
+    callback(null, true);
 
-//     if (process.env.MODE === "LOCAL" || process.env.MODE === "DEV") {
-//       callback(null, true);
-//       return;
-//     }
-//     if (whitelist.indexOf(origin) !== -1) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-// };
+    if (process.env.MODE === "LOCAL" || process.env.MODE === "DEV") {
+      callback(null, true);
+      return;
+    }
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
 
-app.use(
-  cors({
-    origin: "*",
-    credentials: true, //access-control-allow-credentials:true
-    optionSuccessStatus: 200,
-  })
-);
-app.use(express.json());
+app.use(cors(corsOptions));
 
-app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "*");
-  res.setHeader("Access-Control-Allow-Headers", "*");
+// app.use(
+//   cors({
+//     origin: "*",
+//     credentials: true, //access-control-allow-credentials:true
+//     optionSuccessStatus: 200,
+//   })
+// );
+// app.use(express.json());
 
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader("Access-Control-Allow-Methods", "*");
+//   res.setHeader("Access-Control-Allow-Headers", "*");
 
-router.get("/init", async (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
+//   next();
+// });
 
-  await mongoRun()
-    .then((e) => res.json({ message: e }))
-    .catch((e) => res.status(400).json({ message: e }));
-});
+// router.get("/init", async (req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+
+//   await mongoRun()
+//     .then((e) => res.json({ message: e }))
+//     .catch((e) => res.status(400).json({ message: e }));
+// });
 
 router.get("/", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "*");
-  res.setHeader("Access-Control-Allow-Headers", "*");
+  // res.setHeader("Access-Control-Allow-Origin", "*");
+  // res.setHeader("Access-Control-Allow-Methods", "*");
+  // res.setHeader("Access-Control-Allow-Headers", "*");
   res.send("demo");
 });
 
