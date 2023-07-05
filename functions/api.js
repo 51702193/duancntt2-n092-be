@@ -60,6 +60,10 @@ router.get("/init", async (req, res, next) => {
     .catch((e) => res.status(400).json({ message: e }));
 });
 
+router.get("/", (req, res) => {
+  res.send("demo");
+});
+
 router.get("/districts", (req, res) => {
   res.send(districtList);
 });
