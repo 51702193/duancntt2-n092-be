@@ -27,7 +27,7 @@ async function run() {
     // return "Pinged your deployment. You successfully connected to MongoDB!";
   } finally {
     // Ensures that the client will close when you finish/error
-    await client.close();
+    // await client.close();
   }
 }
 run().catch(console.dir);
@@ -43,10 +43,11 @@ const dbConfig = {
   ],
 };
 
+client.connect();
+
 async function initDb() {
   // const db = await (await client.connect()).db(dbConfig.database);
   try {
-    await client.connect();
     const db = client.db(dbConfig.database);
 
     const collectionsExists = await db.listCollections().toArray();
@@ -65,7 +66,7 @@ async function initDb() {
 
     return collectionsExists;
   } finally {
-    await client.close();
+    // await client.close();
   }
 }
 
@@ -73,9 +74,34 @@ async function getProvinces() {
   try {
     await client.connect();
     const db = client.db(dbConfig.database);
-    return await db.collection("provinces").find({}).toArray();
+    return await db.collection("provinces").find().toArray();
   } finally {
-    await client.close();
+    // await client.close();
+  }
+}
+
+async function dangTinTuc(data) {
+  try {
+    await client.connect();
+    const db = client.db(dbConfig.database);
+    return await db.collection("tintuc").insertOne(data);
+  } finally {
+    // await client.close();
+  }
+}
+
+async function topDuAn() {
+  try {
+    await client.connect();
+    const db = client.db(dbConfig.database);
+    return await db
+      .collection("tintuc")
+      .find()
+      .sort({ $natural: -1 })
+      .limit(3)
+      .toArray();
+  } finally {
+    // await client.close();
   }
 }
 
@@ -86,4 +112,4 @@ async function getProvinces() {
 //     }, 300);
 //   });
 
-module.exports = { initDb, getProvinces };
+module.exports = { initDb, getProvinces, dangTinTuc, topDuAn };
