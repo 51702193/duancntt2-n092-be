@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 const districtList = require("../seed-data/districtList.json");
 const provinceList = require("../seed-data/provinceList.json");
@@ -105,6 +105,26 @@ async function topDuAn() {
   }
 }
 
+async function duAn({ id }) {
+  try {
+    await client.connect();
+    const db = client.db(dbConfig.database);
+    const tintuc = await db
+      .collection("tintuc")
+      .findOne({ _id: new ObjectId(id) });
+    provinceList;
+    return {
+      ...tintuc.data,
+      _id: tintuc._id,
+      province: provinceList.find((p) => p.provinceId == tintuc.data.province),
+      district: districtList.find((p) => p.districtId == tintuc.data.district),
+      ward: wardList.find((p) => p.wardId == tintuc.data.ward),
+    };
+  } finally {
+    // await client.close();
+  }
+}
+
 // const initDb = () =>
 //   new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -112,4 +132,4 @@ async function topDuAn() {
 //     }, 300);
 //   });
 
-module.exports = { initDb, getProvinces, dangTinTuc, topDuAn };
+module.exports = { initDb, getProvinces, dangTinTuc, topDuAn, duAn };

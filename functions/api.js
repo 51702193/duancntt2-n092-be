@@ -4,7 +4,13 @@ const serverless = require("serverless-http");
 const cors = require("cors");
 const path = require("path");
 
-const { initDb, getProvinces, dangTinTuc, topDuAn } = require("../mongodb");
+const {
+  initDb,
+  getProvinces,
+  dangTinTuc,
+  topDuAn,
+  duAn,
+} = require("../mongodb");
 
 require("dotenv/config");
 
@@ -110,6 +116,18 @@ router.get(
   "/top-du-an",
   asyncHandler(async (req, res) => {
     await topDuAn()
+      .then((e) => res.json(e))
+      .catch((e) => {
+        console.log("e", e);
+        res.status(400).json({ message: e });
+      });
+  })
+);
+
+router.get(
+  "/du-an",
+  asyncHandler(async (req, res) => {
+    await duAn({ id: req.query.id })
       .then((e) => res.json(e))
       .catch((e) => {
         console.log("e", e);
