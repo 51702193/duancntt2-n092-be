@@ -90,16 +90,39 @@ async function dangTinTuc(data) {
   }
 }
 
-async function topDuAn() {
+async function listDuAn({
+  province,
+  district,
+  ward,
+  pageSize = 3,
+  currentPage = 1,
+}) {
+  const filter = {};
+  if (province) {
+    filter["data.province"] = province;
+  }
+  if (district) {
+    filter["data.district"] = district;
+  }
+  if (ward) {
+    filter["data.ward"] = ward;
+  }
   try {
     await client.connect();
     const db = client.db(dbConfig.database);
     return await db
       .collection("tintuc")
-      .find()
+      .find(filter)
       .sort({ $natural: -1 })
-      .limit(3)
+      .skip(pageSize * (currentPage - 1))
+      .limit(+pageSize)
       .toArray();
+    // .filter(
+    //   (e) =>
+    //     e.province == (province || true) &&
+    //     e.district == (district || true) &&
+    //     e.ward == (ward || true)
+    // );
   } finally {
     // await client.close();
   }
@@ -132,4 +155,4 @@ async function duAn({ id }) {
 //     }, 300);
 //   });
 
-module.exports = { initDb, getProvinces, dangTinTuc, topDuAn, duAn };
+module.exports = { initDb, getProvinces, dangTinTuc, listDuAn, duAn };

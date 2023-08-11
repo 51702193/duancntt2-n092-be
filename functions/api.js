@@ -8,7 +8,7 @@ const {
   initDb,
   getProvinces,
   dangTinTuc,
-  topDuAn,
+  listDuAn,
   duAn,
 } = require("../mongodb");
 
@@ -76,9 +76,6 @@ router.get(
 );
 
 router.get("/", (req, res) => {
-  // res.setHeader("Access-Control-Allow-Origin", "*");
-  // res.setHeader("Access-Control-Allow-Methods", "*");
-  // res.setHeader("Access-Control-Allow-Headers", "*");
   res.send("demo");
 });
 
@@ -94,10 +91,16 @@ router.get(
   })
 );
 router.get("/districts", (req, res) => {
-  res.send(districtList);
+  const result = districtList.filter(
+    (e) => e.provinceId == (req.query.province || true)
+  );
+  res.send(result);
 });
 router.get("/wards", (req, res) => {
-  res.send(wardList);
+  const result = wardList.filter(
+    (e) => e.districtId == (req.query.district || true)
+  );
+  res.send(result);
 });
 
 router.post(
@@ -113,9 +116,9 @@ router.post(
 );
 
 router.get(
-  "/top-du-an",
+  "/list-du-an",
   asyncHandler(async (req, res) => {
-    await topDuAn()
+    await listDuAn(req.query || {})
       .then((e) => res.json(e))
       .catch((e) => {
         console.log("e", e);
