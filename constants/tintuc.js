@@ -1,0 +1,7 @@
+const TINTUC_STATUS = {
+  APPROVED: "APPROVED",
+  REJECTED: "REJECTED",
+  SUBMITTED: "SUBMITTED",
+};
+
+module.exports = { TINTUC_STATUS };

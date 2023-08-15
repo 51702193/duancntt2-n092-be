@@ -3,6 +3,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const districtList = require("../seed-data/districtList.json");
 const provinceList = require("../seed-data/provinceList.json");
 const wardList = require("../seed-data/wardList.json");
+const { TINTUC_STATUS } = require("../constants/tintuc");
 
 const uri =
   "mongodb+srv://51702193:vista1406@dacntt2cluster.ep5jzno.mongodb.net/?retryWrites=true&w=majority";
@@ -84,7 +85,24 @@ async function dangTinTuc(data) {
   try {
     await client.connect();
     const db = client.db(dbConfig.database);
-    return await db.collection("tintuc").insertOne(data);
+    return await db.collection("tintuc").insertOne({
+      data: { ...data.data, status: TINTUC_STATUS.SUBMITTED },
+    });
+  } finally {
+    // await client.close();
+  }
+}
+
+async function updateTinTuc(data) {
+  try {
+    await client.connect();
+    const db = client.db(dbConfig.database);
+    await db
+      .collection("tintuc")
+      .updateOne(
+        { _id: new ObjectId(data?.data?._id) },
+        { $set: { "data.status": data?.data?.status } }
+      );
   } finally {
     // await client.close();
   }
@@ -96,6 +114,7 @@ async function listDuAn({
   ward,
   pageSize = 3,
   currentPage = 1,
+  status,
 }) {
   const filter = {};
   if (province) {
@@ -106,6 +125,9 @@ async function listDuAn({
   }
   if (ward) {
     filter["data.ward"] = ward;
+  }
+  if (status) {
+    filter["data.status"] = status;
   }
   try {
     await client.connect();
@@ -135,7 +157,6 @@ async function duAn({ id }) {
     const tintuc = await db
       .collection("tintuc")
       .findOne({ _id: new ObjectId(id) });
-    provinceList;
     return {
       ...tintuc.data,
       _id: tintuc._id,
@@ -155,4 +176,11 @@ async function duAn({ id }) {
 //     }, 300);
 //   });
 
-module.exports = { initDb, getProvinces, dangTinTuc, listDuAn, duAn };
+module.exports = {
+  initDb,
+  getProvinces,
+  dangTinTuc,
+  listDuAn,
+  duAn,
+  updateTinTuc,
+};
