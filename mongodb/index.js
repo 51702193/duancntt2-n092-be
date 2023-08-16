@@ -115,6 +115,7 @@ async function listDuAn({
   pageSize = 3,
   currentPage = 1,
   status,
+  user,
 }) {
   const filter = {};
   if (province) {
