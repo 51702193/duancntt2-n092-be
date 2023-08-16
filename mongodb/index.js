@@ -129,6 +129,9 @@ async function listDuAn({
   if (status) {
     filter["data.status"] = status;
   }
+  if (user) {
+    filter["data.user"] = user;
+  }
   try {
     await client.connect();
     const db = client.db(dbConfig.database);
