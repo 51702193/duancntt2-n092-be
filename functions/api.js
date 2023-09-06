@@ -11,6 +11,7 @@ const {
   listDuAn,
   duAn,
   updateTinTuc,
+  deleteTinTuc,
 } = require("../mongodb");
 
 require("dotenv/config");
@@ -120,6 +121,18 @@ router.post(
   "/update-tin-tuc",
   asyncHandler(async (req, res) => {
     await updateTinTuc(req.body)
+      .then((e) => res.json(e))
+      .catch((e) => {
+        console.log("e", e);
+        res.status(400).json({ message: e });
+      });
+  })
+);
+
+router.post(
+  "/xoa-tin-tuc",
+  asyncHandler(async (req, res) => {
+    await deleteTinTuc(req.body)
       .then((e) => res.json(e))
       .catch((e) => {
         console.log("e", e);

@@ -108,6 +108,21 @@ async function updateTinTuc(data) {
   }
 }
 
+async function deleteTinTuc(data) {
+  try {
+    await client.connect();
+    const db = client.db(dbConfig.database);
+    await db
+      .collection("tintuc")
+      .deleteOne(
+        { _id: new ObjectId(data?.data?._id) },
+        // { $set: { "data.status": data?.data?.status } }
+      );
+  } finally {
+    // await client.close();
+  }
+}
+
 async function listDuAn({
   province,
   district,
@@ -187,4 +202,5 @@ module.exports = {
   listDuAn,
   duAn,
   updateTinTuc,
+  deleteTinTuc,
 };
